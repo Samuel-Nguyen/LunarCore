@@ -9,6 +9,7 @@ import emu.lunarcore.game.avatar.GameAvatar;
 import emu.lunarcore.game.enums.ItemMainType;
 import emu.lunarcore.game.enums.ItemSubType;
 import emu.lunarcore.game.inventory.GameItem;
+import emu.lunarcore.game.inventory.tabs.InventoryTabType;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.util.Utils;
 
@@ -24,15 +25,24 @@ public class BestInSlotCommand implements CommandHandler {
     Player target = args.getTarget();
     int id = Utils.parseSafeInt(args.get(0));
 
-    if (id == 0) {
-      
+    if (id != 0) {
+      args.sendMessage("Input id " + id);
+
+      for (var excel : GameData.getAvatarExcelMap().values()) {
+        // Get avatar id
+        GameAvatar avatar = target.getAvatarById(id);
+        args.sendMessage(target.getName() + " get the id " + id + " of characters: " + avatar.getAvatarId());
+      }
     }
 
-    for (var excel : GameData.getAvatarExcelMap().values()) {
-      // Get avatar id
-      GameAvatar avatar = target.getAvatarById(excel.getAvatarID());
-      args.sendMessage(target.getName() + " get the id of characters: " + avatar.getAvatarId());
+    // Sanity check materials
+    var inventory = args.getTarget().getInventory();
+    if (inventory.getTab(InventoryTabType.RELIC).getAvailableCapacity() <= 0
+        || inventory.getTab(InventoryTabType.EQUIPMENT).getAvailableCapacity() <= 0) {
+      args.sendMessage("Error: The targeted player does not has enough space in their relic/lightcone inventory");
+      return;
     }
+
   }
 
 }
