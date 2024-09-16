@@ -3,14 +3,134 @@
     "avatarId": "1308",
     "avatarName": "ache",
     "fullName": "Acheron",
-    "eidolon": "0",
     "skill": "10",
     "buildList": [
       {
         "buildName": "normal",
+        "eidolon": "0",
         "equipment": {
           "tid": "21001",
           "imposition": "5"
+        },
+        "relicList": [
+          {
+            "tid": "61171",
+            "type": "1",
+            "mainAffixId": "1",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "3"
+              },
+              {
+                "affixId": "9",
+                "cnt": "4"
+              }
+            ]
+          },
+          {
+            "tid": "61172",
+            "type": "2",
+            "mainAffixId": "1",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "3"
+              },
+              {
+                "affixId": "9",
+                "cnt": "4"
+              }
+            ]
+          },
+          {
+            "tid": "61173",
+            "type": "3",
+            "mainAffixId": "5",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "6"
+              }
+            ]
+          },
+          {
+            "tid": "61174",
+            "type": "4",
+            "mainAffixId": "2",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "3"
+              },
+              {
+                "affixId": "9",
+                "cnt": "4"
+              }
+            ]
+          },
+          {
+            "tid": "63145",
+            "type": "5",
+            "mainAffixId": "2",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "3"
+              },
+              {
+                "affixId": "9",
+                "cnt": "4"
+              }
+            ]
+          },
+          {
+            "tid": "63146",
+            "type": "6",
+            "mainAffixId": "4",
+            "subAffixList": [
+              {
+                "affixId": "7",
+                "cnt": "1"
+              },
+              {
+                "affixId": "8",
+                "cnt": "3"
+              },
+              {
+                "affixId": "9",
+                "cnt": "4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "buildName": "best",
+        "eidolon": "0",
+        "equipment": {
+          "tid": "23024",
+          "imposition": "1"
         },
         "relicList": [
           {
@@ -154,10 +274,11 @@
         ]
       },
       {
-        "buildName": "best",
+        "buildName": "h6t5",
+        "eidolon": "6",
         "equipment": {
           "tid": "23024",
-          "imposition": "1"
+          "imposition": "5"
         },
         "relicList": [
           {

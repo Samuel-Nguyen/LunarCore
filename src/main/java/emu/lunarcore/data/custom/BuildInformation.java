@@ -9,13 +9,13 @@ public class BuildInformation {
     private int avatarId;
     private String avatarName;
     private String fullName;
-    private int eidolon;
     private int skill;
     private List<BuildDetail> buildList;
 
     @Getter
     public static class BuildDetail {
         private String buildName;
+        private int eidolon;
         private EquipmentDetail equipment;
         private List<RelicDetail> relicList;
     }
