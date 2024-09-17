@@ -52,6 +52,9 @@ public class BuildCommand implements CommandHandler {
                         total++;
                     }
                     default -> {
+                        if (!buildInfo.getAvatarName().equals(name)) {
+                            continue;
+                        }
                         build = generateBuild(args, buildInfo, args.getTarget(), buildName, build);
                         // Get the character name
                         message = "Give " + buildInfo.getFullName() + " relics for " + buildName.toUpperCase()
@@ -64,7 +67,9 @@ public class BuildCommand implements CommandHandler {
                     }
                 }
             }
-            message = "Give " + total + " characters relics for BEST build.";
+            if (total > 0) {
+                message = "Give " + total + " characters relics for BEST build.";
+            }
         } catch (Exception e) {
             // TODO: handle exception
             args.sendMessage("Something wrong!!");
